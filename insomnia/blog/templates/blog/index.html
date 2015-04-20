@@ -1,19 +1,17 @@
+{% load staticfiles %}
 <html>
 <head>
-<style type="text/css">
-body {background-color: pink}
-p {margin-left: 20px}
-</style>
-
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}" />
 </head>
+
 <body>
 {% for post in latest_post_list %}
 	<h1>{{ post.post_title }}</h1>
 	<hr />
 	<h2>{{ post.post_author }}</h2>
-	<p>{{ post.post_timestamp }}</p>
+	<p id="red">{{ post.post_timestamp }}</p>
 	<hr />
-	<p>{{ post.post_content }}</p>
+	<p id="blue">{{ post.post_content }}</p>
 {% endfor %}
 </body>
 <html>
