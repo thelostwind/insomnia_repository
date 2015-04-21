@@ -6,11 +6,99 @@ body {
 	font-family: Verdana, sans-serif;
 }
 
-p {
+#ss p {
 	font-family: Times, "Times New Roman", serif;
+	background-color: gray;
+	padding: 20px;
+	text-indent: -5em;
+	padding-left: 5em;
 }
 
+#div {
+	width: 500px;
+	background-color: gray;	
+}
+#para {text-indent: 20%}
+
+a:link {
+	color:#FF0000;
+	text-decoration:none;
+	background-color:#B2FF99;
+}
+a:visited {
+	color:#00FF00;
+	text-decoration:none;
+	background-color:#FFFF85;
+}
+a:hover {
+	color:#FF00FF;
+	text-decoration:underline;
+	background-color:#FF704D;
+}
+a:active {
+	color:#0000FF;
+	text-decoration:underline;
+	background-color:#FF704D;
+}
+
+ul.square {list-style-type: square;}
+
+
+/* 为#div设置边框 */
+#div  {
+	border-style: solid;
+	border-width: thick;
+}
+
+/* 表格表格属性 */
+#ss table, td, th {
+	border: 1px solid green;
+}
+#ss th {
+	background-color: green;
+	color: white
+}
+#ss td {
+	background-color: red;
+	color: black;
+}
+
+/* 如何制作一个漂亮的表格 */
+#customers {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#customers td, #customers th{
+	font-size: 1em;
+	border: 1px solid #98bf21;
+	padding: 3px 7px 2px 7px;
+}
+
+#customers th
+{
+	font-size: 1.1em;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	background-color: #A7C942;
+	color: #ffffff;
+}
+
+#customers tr.alt td{
+	color: #000000;
+	background-color: #EAF2D3;
+}
+
+/* END */
+
+
+
 #red {color: red;}
-#blue {color: blue}
-
-
+#blue {
+	color: blue;
+	text-decoration: underline;
+	white-space: pre-wrap;
+	font-family: Times;
+}
