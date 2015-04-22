@@ -20,22 +20,22 @@ body {
 }
 #para {text-indent: 20%}
 
-a:link {
+#link:link {
 	color:#FF0000;
 	text-decoration:none;
 	background-color:#B2FF99;
 }
-a:visited {
+#link:visited {
 	color:#00FF00;
 	text-decoration:none;
 	background-color:#FFFF85;
 }
-a:hover {
+#link:hover {
 	color:#FF00FF;
 	text-decoration:underline;
 	background-color:#FF704D;
 }
-a:active {
+#link:active {
 	color:#0000FF;
 	text-decoration:underline;
 	background-color:#FF704D;
@@ -92,6 +92,49 @@ ul.square {list-style-type: square;}
 }
 
 /* END */
+
+
+/* 使用像素值设置图像的高度 */
+img.normal {
+	height: auto;
+}
+
+img.big {
+	height: 500px;
+}
+
+img.small {
+	height: 30px;
+}
+
+/* END */
+
+/* CSS导航条：链接列表 */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 6px;
+	padding-tottom: 6px;
+}
+
+li {
+	display: inline;
+}
+
+a:link, a:visited {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #98bf21;
+	text-align: center;
+	padding: 6px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a:hover, a:active {
+	background-color: #7A991A;
+}
 
 
 
