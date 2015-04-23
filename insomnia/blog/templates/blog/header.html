@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>{{ headinfo.title }}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/header.css'%}">
+</head>
+<body>
+<div role="banner" id="top">
+	<a id="blogname" href="#a">{{ headinfo.blogname }}</a>
+	<p class="meta">{{ headinfo.blogdescription }}</p>
+	<div role="navigation">
+	<ul>
+		{% for navigation in navigation_list %}
+		<li class="nav">
+		<a class="nav_title" href="#b">{{ navigation.nav_title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	</div>
+</div>
+</body>
+</html>

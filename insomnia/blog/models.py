@@ -23,3 +23,26 @@ class Post(models.Model):
     def __unicode__(self):
         return u'%s' % (self.post_title)
 
+class Navigation(models.Model):
+    id = models.AutoField(primary_key = True)
+    nav_title = models.CharField(max_length = 20, unique = True, verbose_name = "导航名")
+    nav_seq = models.PositiveSmallIntegerField(unique = True, verbose_name = "排列序号")
+    def __unicode__(self):
+        return u'%s' % (self.nav_title)
+
+
+class Info(object):
+    def get_head_info(self):
+        class HeadInfo:
+            def __init__(self, blogname, blogdescription, title="Insomnia"):
+                self.blogname = blogname
+                self.blogdescription = blogdescription
+                self.title = title
+
+        blogname = "Insomina"
+        blogdescription = "You also can not sleep?"
+
+        info = HeadInfo(blogname, blogdescription)
+        return info
+
+

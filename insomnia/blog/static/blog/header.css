@@ -1,0 +1,41 @@
+/* 导航栏、banner的css  */
+
+body {
+	width: 500px;
+
+}
+#blogname {
+	text-decoration: none;
+}
+
+li.nav {
+	float: right;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+a.nav_title {
+	display: block;
+	width: 80px;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.nav_title:link, a.nav_title:visited
+{
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #bebebe;
+	padding: 4px;
+}
+
+ a.nav_title:hover,  a.nav_title:active
+ {
+ 	background-color: #cc0000;
+ }
