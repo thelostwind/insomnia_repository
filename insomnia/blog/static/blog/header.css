@@ -1,11 +1,45 @@
 /* 导航栏、banner的css  */
 
-body {
-	width: 500px;
+div.banner {
+	height: 100px;
+	background-color: #bebebe;
+	margin: 0;
+	padding: 0;
+}
+
+div.logo {
+	float: left;
+	position: relative;
+	left: 20%;
+	top 30px;
+}
+
+#blog_name {
+	font-family: Cursive;
+	color: #cc0000;
+	display: block;
+	float: left;
+	width: 130px;
+	height: 40px;
+	text-decoration: none;
+	font-size: 28px;
+	font-weight: 900;
+	padding: 0px;
+	margin-top: 7%;
+}
+#blog_description {
+	float: left;
+	font-family: Cursive;
+	text-decoration: none;
+	padding: 0px;
+	margin-top: 15%;
 
 }
-#blogname {
-	text-decoration: none;
+
+div.navigation {
+	position: relative;
+	right: 20%;
+	top: 30%;
 }
 
 li.nav {
@@ -25,6 +59,7 @@ a.nav_title {
 	width: 80px;
 	text-align: center;
 	text-decoration: none;
+	font-family: "黑体";
 }
 
 a.nav_title:link, a.nav_title:visited
@@ -35,7 +70,20 @@ a.nav_title:link, a.nav_title:visited
 	padding: 4px;
 }
 
- a.nav_title:hover,  a.nav_title:active
+a.nav_title:hover,  a.nav_title:active
  {
  	background-color: #cc0000;
  }
+
+div.title {
+	float: top;
+	height: 80px;
+	background-color: #E7E7E7;
+	margin-top: -0.9%;
+	padding: 0;
+} 
+p.title {
+	
+}
+
+

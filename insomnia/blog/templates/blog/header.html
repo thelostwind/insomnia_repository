@@ -5,10 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'blog/header.css'%}">
 </head>
 <body>
-<div role="banner" id="top">
-	<a id="blogname" href="#a">{{ headinfo.blogname }}</a>
-	<p class="meta">{{ headinfo.blogdescription }}</p>
-	<div role="navigation">
+<div class="banner" id="top">
+	<div class="logo">
+	<a id="blog_name" href="#a">{{ headinfo.blogname }}</a>
+	<p id="blog_description">{{ headinfo.blogdescription }}</p>
+	</div>
+	<div class="navigation">
 	<ul>
 		{% for navigation in navigation_list %}
 		<li class="nav">
@@ -18,5 +20,10 @@
 	</ul>
 	</div>
 </div>
+
+<div class="title">
+	<p class="title">首页</p>
+</div>
+	
 </body>
 </html>

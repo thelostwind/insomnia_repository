@@ -40,7 +40,7 @@ class Info(object):
                 self.title = title
 
         blogname = "Insomina"
-        blogdescription = "You also can not sleep?"
+        blogdescription = "You can't sleep too?"
 
         info = HeadInfo(blogname, blogdescription)
         return info
