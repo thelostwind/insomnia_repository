@@ -1,89 +1,247 @@
-/* 导航栏、banner的css  */
+body {
+	font-size: small;
+	font-family: Cursive;
+	padding: 0;
+	margin: 0;
+}
 
-div.banner {
-	height: 100px;
-	background-color: #bebebe;
+
+#blog_header_wrapper {
+	width 100%;
+	height: 125px;
+}
+
+#blog_header {
+	width: 940px;
+	height: 125px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+#blog_header #blog_name {
+	float: left;
+	width: 300px;
+	padding-top: 30px;
+}
+
+#blog_header #blogname h1 {
 	margin: 0;
 	padding: 0;
 }
 
-div.logo {
-	float: left;
-	position: relative;
-	left: 20%;
-	top 30px;
+#blog_header #blog_name a {
+	margin: 0px;
+	padding: 0px;
+	font-size: 40px;
+	color: grey;
+	font-weight: bold;
+	text-decoration: none;
 }
 
-#blog_name {
-	font-family: Cursive;
-	color: #cc0000;
+#blog_header #blog_name a span {
 	display: block;
-	float: left;
-	width: 130px;
-	height: 40px;
-	text-decoration: none;
-	font-size: 28px;
-	font-weight: 900;
-	padding: 0px;
-	margin-top: 7%;
-}
-#blog_description {
-	float: left;
-	font-family: Cursive;
-	text-decoration: none;
-	padding: 0px;
-	margin-top: 15%;
-
+	font-size: 16px;
+	color: #ccc;
+	font-weight: normal;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
-div.navigation {
-	position: relative;
-	right: 20%;
-	top: 30%;
+#blog_nav_wrapper {
+	width: 100%;
+	height: 50px;
 }
 
-li.nav {
-	float: right;
+#blog_nav {
+	width: 940px;
+	height: 50px;
+	padding: 0 10px;
+	margin: 0 auto;
 }
 
-ul{
-	list-style-type: none;
+#blog_nav ul {
+	height: 53px;
 	margin: 0;
-	padding: 0;
-	overflow: hidden;
+	padding: 16px 0 0 0;
+	list-style: none;
 }
 
+#blog_nav ul li {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
 
-a.nav_title {
+#blog_nav ul li a {
+	float: left;
 	display: block;
-	width: 80px;
+	margin-right: 70px;
+	color: #d2a3cd;
 	text-align: center;
 	text-decoration: none;
-	font-family: "黑体";
-}
-
-a.nav_title:link, a.nav_title:visited
-{
 	font-weight: bold;
-	color: #FFFFFF;
-	background-color: #bebebe;
-	padding: 4px;
+	outline: none;
+	border: none;
 }
 
-a.nav_title:hover,  a.nav_title:active
- {
- 	background-color: #cc0000;
- }
 
-div.title {
-	float: top;
-	height: 80px;
-	background-color: #E7E7E7;
-	margin-top: -0.9%;
+#blog_nav ul li a:hover {
+	color: #f4703a;
+}
+
+
+/* 中间的内容部分 */
+
+#wrapper_outer {
+	clear: both;
+	width: 100%;	
+}
+
+#wrapper_inner {
+	width: 950px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+#content_middle {
+	width: 920px;
+	padding: 10px 25px;
+	margin: 0 auto;
+}
+
+#blog_content {
+	float:  left;
+	width: 620px;
+	padding-right: 20px;
+}
+.post_box {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #433d3a;
+}
+
+.post_box h2 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	line-height: 30px;
+}
+
+.post_box h2 a {
+	color: gray;
+	text-decoration: none;
+}
+
+.post_box .post_meta {
+	padding: 5px;
+	margin-bottom: 20px;
+	background: gray;
+}
+
+.post_box p {
+	text-align: justify;
+	margin-bottom: 20px;
+	white-space: pre;
+}
+
+
+/* 边栏属性 */
+#sidebar_wrapper {
+	float: right;
+	width: 260px;
+}
+
+
+/* 设置分类 */
+
+#categories h4{
+	font-size: 18px;
+	margin: 0 0 20px 0;
 	padding: 0;
-} 
-p.title {
-	
+	color: gray;
+	font-weight: normal;
 }
 
 
+#categories ul {
+	margin: 20px 10px;
+	padding: 0;
+	list-style: none;
+}
+
+#categories ul li {
+	background: transparent;
+	margin: 0 0 10px;
+	padding: 0;
+	line-height: 1em;
+}
+
+#categories ul li a {
+	color: #9570c9;
+	text-decoration: none;
+}
+
+#categories ul li a:hover {
+	color: #f27444;
+	text-decoration: none;
+}
+
+/* 设置分类结束 */
+
+/* 设置最近评论 */
+#recent_comments h4 {
+        font-size: 18px;
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: gray;
+        font-weight: normal;	
+}
+
+#recent_comments ul {
+	margin: 20px 10px;
+	padding: 0;
+	list-style: none;
+}
+
+#recent_comments ul li {
+	background: transparent;
+	margin: 0 0 10px;
+	padding: 0;
+	line-height: 1em;
+}
+
+#recent_comments li span {
+	color: gray;
+}
+
+#recent_comments li a {
+	color: #9570c9;
+	text-decoration: none;
+}
+
+#recent_comments li a:hover {
+	color: #f27444;
+	text-decoration: none;
+}
+
+/* 设置最近评论结束 */
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+
+
+
+#footer_wrapper {
+	clear: both;
+}
+
+#footer {
+	width: 940px;
+	height: 40px;
+	padding: 0;
+	margin: 0 auto;	
+}
+
+#footer p {
+	width: 400px;
+	padding: 0;
+	margin: 0 auto;
+}

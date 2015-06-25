@@ -5,25 +5,75 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'blog/header.css'%}">
 </head>
 <body>
-<div class="banner" id="top">
-	<div class="logo">
-	<a id="blog_name" href="#a">{{ headinfo.blogname }}</a>
-	<p id="blog_description">{{ headinfo.blogdescription }}</p>
-	</div>
-	<div class="navigation">
-	<ul>
-		{% for navigation in navigation_list %}
-		<li class="nav">
-		<a class="nav_title" href="#b">{{ navigation.nav_title }}</a>
-		</li>
-		{% endfor %}
-	</ul>
+
+<!-- 标题栏 -->
+
+<div class="header" id="blog_header_wrapper">
+	<div class="header" id="blog_header">
+		<div class="header" id="blog_name">
+			<h1><a href="#a">{{ headinfo.blogname }}<span>TIME IS NOT ON YOUR SIDE</span></a></h1>
+		</div>
+	</div> 
+</div>
+
+<!-- 导航栏 -->
+
+<div class="nav" id="blog_nav_wrapper">
+	<div class="nav" id="blog_nav">
+		<ul>
+			{% for navigation in navigation_list %}
+			<li class="nav">
+			<a class="nav" href="#b">{{ navigation.nav_title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>
 
-<div class="title">
-	<p class="title">首页</p>
+<!-- 博客内容  -->
+<div id="wrapper_outer">
+<div id="wrapper_inner">
+<div id="content_top"></div>
+<div id="content_middle">
+
+<div id="blog_content">
+	<div class="post_box">
+		{% for post in post_list %}
+		<h2><a href="#c">{{ post.post_title }}</a></h2>
+		<div class="post_meta"><strong>Date:</strong>{{ post.post_timestamp }} |<strong>Author:</strong>{{ post.post_author}}</div>
+		<p>{{ post.post_content}}</p>
+		{% endfor %}
+	</div>
 </div>
-	
+
+	<div id="sidebar_wrapper">
+		<div class="sidebar" id="categories">
+			<h4>Categories</h4>
+			<ul id="cate_list">		
+			{% for category in category_list %}
+			<li><a href="index.html">{{ category.cate_name }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="sidebar" id="recent_comments">
+			<h4>Recent Comments</h4>
+			<ul>
+			{% for comment in recent_comments %}
+			<li><span>{{ comment.comment_author }} </span> on <a href="#a">{{ comment.comment_post }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="cleaner"></div>
+</div> <!-- end of  content_middle -->	
+</div> <!-- end of wrapper_inner -->
+</div> <!-- end of wrapper outer -->
+<!-- 页脚 -->
+<div id="footer_wrapper">
+	<div id="footer">
+		<p id="footer"> Please steal this page, it isn't copyrighted in any way</p>
+	</div>
+</div>
 </body>
 </html>
