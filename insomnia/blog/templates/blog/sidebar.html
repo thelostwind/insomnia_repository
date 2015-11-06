@@ -1,0 +1,23 @@
+	<div id="sidebar_wrapper">
+		<div class="sidebar" id="categories">
+			<h4>Categories</h4>
+			<ul id="cate_list">		
+			{% for category in category_list %}
+			<li><a href="index.html">{{ category.cate_name }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="sidebar" id="recent_comments">
+			<h4>Recent Comments</h4>
+			<ul>
+			{% for comment in recent_comments %}
+			<li><span>{{ comment.comment_author }} </span> on <a href="#a">{{ comment.comment_post }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="cleaner"></div>
+</div> <!-- end of  content_middle -->	
+</div> <!-- end of wrapper_inner -->
+</div> <!-- end of wrapper outer -->

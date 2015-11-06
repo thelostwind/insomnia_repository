@@ -29,6 +29,21 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS':['../blog/templates/blog/',],
+        }
+]
+
+
+TEMPLATE_DIRS = (
+        os.path.join(os.path.dirname(__file__), '../blog/templates/blog').replace('\\', '/'),
+
+)
+
+
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',

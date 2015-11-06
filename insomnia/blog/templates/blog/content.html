@@ -1,0 +1,15 @@
+<!-- 博客内容  -->
+<div id="wrapper_outer">
+<div id="wrapper_inner">
+<div id="content_top"></div>
+<div id="content_middle">
+
+<div id="blog_content">
+	<div class="post_box">
+		{% for post in post_list %}
+		<h2><a href="#c">{{ post.post_title }}</a></h2>
+		<div class="post_meta"><strong>Date:</strong>{{ post.post_timestamp }} |<strong>Author:</strong>{{ post.post_author}}</div>
+		<p>{{ post.post_content}}</p>
+		{% endfor %}
+	</div>
+</div>

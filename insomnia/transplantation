@@ -1,0 +1,6 @@
+CREATE DATABASE wannadb;
+CREATE USER wbadm WITH PASSWORD 'wannapass';
+ANT ALL PRIVILEGES ON DATABASE wannadb to wbadm;
+ALTER USER wbadm CREATEUSER CREATEROLE;
+
+manager.py migrate
