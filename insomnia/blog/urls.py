@@ -10,4 +10,6 @@ from . import views
 
 urlpatterns = patterns('blog.views',
         url(r'^$', 'blog'),
+        url(r'^blog/', 'blog'),
+        url(r'^article/(\d+)/$', 'article'),
         )

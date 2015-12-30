@@ -1,6 +1,14 @@
-CREATE DATABASE wannadb;
-CREATE USER wbadm WITH PASSWORD 'wannapass';
-ANT ALL PRIVILEGES ON DATABASE wannadb to wbadm;
-ALTER USER wbadm CREATEUSER CREATEROLE;
+sudo su postgres
+psql
+
+
+postgres=# CREATE DATABASE simpledb;
+CREATE DATABASE
+postgres=# CREATE USER kylin WITH PASSWORD '123123';
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE simpledb to kylin;
+GRANT
+postgres=# ALTER USER kylin CREATEUSER CREATEROLE;
+
 
 manager.py migrate
