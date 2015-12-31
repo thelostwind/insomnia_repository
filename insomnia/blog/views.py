@@ -6,6 +6,8 @@ from django.core.paginator import Paginator, Page, EmptyPage, PageNotAnInteger
 
 from .models import User, Post, Navigation, Category, Comments, Info
 
+import logging
+
 info = Info()
 
 def index(request):
@@ -128,9 +130,10 @@ def render_page_more(posts, num='1', nator=None, comment=None, num_page=5,more=3
 #        nator = render_nator(page)
  
     contents = render_contents(posts, more = more)
+    
 
     context = {
-            'page_contents' : contents,
+            'page_contents' : contents
 #            'page_nator' : nator,
             }
 
@@ -145,12 +148,11 @@ def render_comment(request, comment_post_id, comments = [], contexts = None):
 
 
 def render_contents(posts, more = None):
-    post_list = Post.objects.order_by('post_timestamp')
-
+    post_list = Post.objects.order_by('-post_timestamp')
     
-    context = {'post_list' : post_list,
-                'more' : more}
+    context = {'post_list' : post_list}
 
+    logging.debug("post_list")
     return render_to_string('content.html', context)
     
 
